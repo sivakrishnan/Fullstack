@@ -1,0 +1,12 @@
+Fullstack-Client
+
+ng new FullstackClient
+
+
+
+#####################################################################################
+Fullstack-Backend
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
