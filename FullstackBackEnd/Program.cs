@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<FullstackDBContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TechkeyDbConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FullstackDbConnection"));
 });
 
 builder.Services.AddControllers();
