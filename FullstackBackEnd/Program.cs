@@ -1,8 +1,10 @@
 using FullstackBackEnd.DbContext;
+using FullstackBackEnd.Extension;
+using FullstackBackEnd.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddExtDependencyInjection();
 // Add services to the container.
 
 builder.Services.AddDbContext<FullstackDBContext>(options =>
@@ -16,7 +18,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+app.UseMiddleware<GlobalExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
