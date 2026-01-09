@@ -9,5 +9,6 @@ namespace FullstackBackEnd.Repository.Interface
         Task<FSResponse> GetAll();
         Task<FSResponse> Insert(MASGender obj);
         Task<FSResponse> Update(MASGender obj);
+        Task<FSResponse> SoftDeleteById(int id);
     }
 }
